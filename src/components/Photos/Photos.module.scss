@@ -1,0 +1,16 @@
+@import "../../styles/mixins";
+
+.inner {
+	display: flex;
+	margin-left: -1.5em;
+}
+
+.column {
+	padding-left: 1.5em;
+}
+
+.photoSkeleton {
+	&:not(:first-child) {
+		margin-top: 1.5em;
+	}
+}

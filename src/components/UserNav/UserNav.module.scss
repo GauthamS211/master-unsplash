@@ -1,0 +1,50 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.nav {
+	display: flex;
+	align-items: center;
+	color: $gray;
+    font-size: 0.875em;
+    padding: 0 1.2em;
+    margin-bottom: 4em;
+    border-bottom: 1px solid $light-gray;
+    @include media($max: "md") {
+		padding: 0 0.85em;
+	}
+}
+
+.link {
+    padding: 1.36em 0;
+    display: flex;
+    align-items: center;
+    transition: 0.1s;
+    &:hover {
+        color: $black;
+    }
+    &:not(:last-child) {
+        margin-right: 2.28em;
+    }
+    svg {
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: 0.57em;
+        transition: 0.1s;
+        @include media($max: "md") {
+            display: none;
+        }
+    }
+}
+
+.number {
+    margin-left: 0.3em;
+    @include media($max: "md") {
+        display: none;
+    }
+}
+
+.active {
+    box-shadow: inset 0 -2px 0 0 $black;
+    color: $black;
+    cursor: default;
+}
